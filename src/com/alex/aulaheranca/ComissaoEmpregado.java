@@ -5,10 +5,10 @@ public class ComissaoEmpregado extends Object {
         private String nome;
         private String sobreNome;
         private String numSeguroSocial;
-        private int vendaBruta;
+        private double vendaBruta;
         private double taxaComissao;
 
-        public ComissaoEmpregado(String nome, String sobreNome, String numSeguroSocial, int vendaBruta, double taxaComissao) {
+        public ComissaoEmpregado(String nome, String sobreNome, String numSeguroSocial, double vendaBruta, double taxaComissao) {
 
                 if (vendaBruta < 0) { //Se Vendas Brutas for invalido, lança uma exceção
                         throw new IllegalArgumentException("Vendas Brutas Deve Ser Maior Que 0");
@@ -41,11 +41,11 @@ public class ComissaoEmpregado extends Object {
                 this.numSeguroSocial = numSeguroSocial;
         }
 
-        public int getVendaBruta() {
+        public double getVendaBruta() {
                 return vendaBruta;
         }
 
-        public void setVendaBruta(int vendaBruta) {
+        public void setVendaBruta(double vendaBruta) {
                   if (vendaBruta < 0) { //Se Vendas Brutas for invalido, lança uma exceção
                         throw new IllegalArgumentException("Vendas Brutas Deve Ser Maior Que 0");
                 }
@@ -69,7 +69,7 @@ public class ComissaoEmpregado extends Object {
 
         @Override
         public String toString() { // significa que esse método substitui um método da superclasse
-                return String.format("%s: %s %s %n%s%s %n%s%d$ %n%s%.2f" ,"Nome Do Empregado",nome, sobreNome,
+                return String.format("%s: %s %s %n%s%s %n%s%.2f$ %n%s%.2f" ,"Nome Do Empregado",nome, sobreNome,
                 "Numero do Seguro Social ", numSeguroSocial, "Venda Bruta ", vendaBruta, "Taxa de Comissão ", taxaComissao);
         }
 
