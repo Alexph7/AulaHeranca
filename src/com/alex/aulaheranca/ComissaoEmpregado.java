@@ -14,7 +14,7 @@ public class ComissaoEmpregado extends Object {
                         throw new IllegalArgumentException("Vendas Brutas Deve Ser Maior Que 0");
                 }
 
-                if (taxaComissao < 0 && taxaComissao > 1.0) {
+                if (taxaComissao < 0 || taxaComissao > 1.0) {
                         throw new IllegalArgumentException("Taxa de Comissão deve ser maior que 0");
                 }
 
