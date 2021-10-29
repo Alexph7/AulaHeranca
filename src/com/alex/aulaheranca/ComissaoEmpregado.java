@@ -69,7 +69,8 @@ public class ComissaoEmpregado extends Object {
 
         @Override
         public String toString() { // significa que esse método substitui um método da superclasse
-                return "ComissaoEmpregado{" + "nome=" + nome + ", sobreNome=" + sobreNome + ", numSeguroSocial=" + numSeguroSocial + ", vendaBruta=" + vendaBruta + ", taxaComissao=" + taxaComissao + '}';
+                return String.format("%s: %s %s %n%s%s %n%s%d$ %n%s%.2f" ,"Nome Do Empregado",nome, sobreNome,
+                "Numero do Seguro Social ", numSeguroSocial, "Venda Bruta ", vendaBruta, "Taxa de Comissão ", taxaComissao);
         }
 
         
