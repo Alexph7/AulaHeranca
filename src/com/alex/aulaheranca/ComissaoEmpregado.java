@@ -1,12 +1,12 @@
 package com.alex.aulaheranca;
 
-public class ComissaoEmpregado extends Object {
+public class ComissaoEmpregado {
 
-        private String nome;
-        private String sobreNome;
-        private String numSeguroSocial;
-        private double vendaBruta;
-        private double taxaComissao;
+        protected final String nome;
+        protected final String sobreNome;
+        protected final String numSeguroSocial;
+        protected double vendaBruta;
+        protected double taxaComissao; //porcentagem da comissão
 
         public ComissaoEmpregado(String nome, String sobreNome, String numSeguroSocial, double vendaBruta, double taxaComissao) {
 
@@ -37,10 +37,6 @@ public class ComissaoEmpregado extends Object {
                 return numSeguroSocial;
         }
 
-        public void setNumSeguroSocial(String numSeguroSocial) {
-                this.numSeguroSocial = numSeguroSocial;
-        }
-
         public double getVendaBruta() {
                 return vendaBruta;
         }
@@ -63,7 +59,7 @@ public class ComissaoEmpregado extends Object {
                 this.taxaComissao = taxaComissao;
         }
         
-        public double lucros(){
+        public double ganhoDeComissao(){
          return vendaBruta * taxaComissao;       
         }
 
